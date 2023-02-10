@@ -1,0 +1,111 @@
+<!-- <app-side-navbar></app-side-navbar> -->
+<!-- <body>
+  <div class="grid grid-flow-col bg-slate-400 auto-cols-max">
+    <div style="text-align: center">
+      <h1>Angular with LINE Login</h1>
+      <hr />
+      <img [src]="pictureUrl" width="300px" height="300px" />
+      <p style="text-align: left; margin-left: 20%">
+        <b>id token: </b> {{ idToken }}
+      </p>
+      <p style="text-align: left; margin-left: 20%">
+        <b>display name: </b> {{ displayName }}
+      </p>
+      <p style="text-align: left; margin-left: 20%">
+        <b>status message: </b> {{ statusMessage }}
+      </p>
+      <p style="text-align: left; margin-left: 20%">
+        <b>user id: </b> {{ userId }}
+      </p>
+
+      <button (click)="logout()" style="width: 100%; height: 30px">
+        Logout
+      </button>
+    </div>
+  </div>
+</body> -->
+
+<div class="bg-gray-100">
+  <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+    <div class="max-w-2xl py-16 mx-auto sm:py-24 lg:max-w-none lg:py-32">
+      <h2 class="text-2xl font-bold text-gray-900">User</h2>
+
+      <div
+        class="mt-6 space-y-12 lg:grid lg:grid-cols-0 lg:gap-x-6 lg:space-y-0"
+      >
+        <!-- <div class="relative group">
+          <div
+            class="relative w-full overflow-hidden bg-white rounded-lg h-80 group-hover:opacity-75 sm:aspect-w-2 sm:aspect-h-1 sm:h-64 lg:aspect-w-1 lg:aspect-h-1"
+          >
+            <img
+              src="https://tailwindui.com/img/ecommerce-images/home-page-02-edition-01.jpg"
+              alt="Desk with leather desk pad, walnut desk organizer, wireless keyboard and mouse, and porcelain mug."
+              class="object-cover object-center w-full h-full"
+            />
+          </div>
+          <h3 class="mt-6 text-sm text-gray-500">
+            <a href="#">
+              <span class="absolute inset-0"></span>
+              Desk and Office
+            </a>
+          </h3>
+          <p class="text-base font-semibold text-gray-900">
+            Work from home accessories
+          </p>
+        </div> -->
+
+        <div class="relative group">
+          <section class="container flex max-w-screen-lg pb-10 hero">
+            <img
+              scale-50
+              [src]="pictureUrl"
+              alt="Wood table with porcelain mug, leather journal, brass pen, leather key ring, and a houseplant."
+              class="object-cover object-center h-full mx-auto w-50"
+            />
+        </section>
+          <!-- <div
+            class="relative bg-white rounded-lg justify-items-centererflow-hidden hi-20 justify- group-hover:opacity-75 sm:aspect-w-2 sm:aspect-h-1 sm:h-60 sm:w-80 lg:aspect-w-1 lg:aspect-h-1"
+          >
+            <img
+              [src]="pictureUrl"
+              alt="Wood table with porcelain mug, leather journal, brass pen, leather key ring, and a houseplant."
+              class="object-cover object-center w-full h-full mx-auto"
+            />
+          </div> -->
+          <h3 class="mt-6 text-sm text-black-500"></h3>
+          <p class="text-base font-semibold text-gray-900">
+            Data user from line
+          </p>
+          <div class="px-4 py-4 rounded-lg bg-slate-500">
+            <div class="mb-2 text-xl font-bold">id token</div>
+            <p class="text-base text-white">
+              {{ idToken }}
+            </p>
+            <div class="mb-2 text-xl font-bold">display name:</div>
+            <p class="text-base text-white">
+              {{ displayName }}
+            </p>
+            <div class="mb-2 text-xl font-bold">status message:</div>
+            <p class="text-base text-white">
+              {{ statusMessage }}
+            </p>
+            <div class="mb-2 text-xl font-bold">user id:</div>
+            <p class="text-base text-white">
+              {{ userId }}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="px-4 py-3 bg-gray-50 sm:flex sm:flex-row-reverse sm:px-6">
+    <button
+      (click)="logout()"
+      type="button"
+      class="inline-flex justify-center w-full px-4 py-2 text-base font-medium text-white bg-red-600 border border-transparent rounded-md shadow-sm hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 sm:ml-3 sm:w-auto sm:text-sm"
+    >
+      Logout
+    </button>
+  </div>
+</div>
+
