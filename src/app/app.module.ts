@@ -15,6 +15,10 @@ import { ToastrModule } from 'ngx-toastr';
 import { UpdatepopupComponent } from './updatepopup/updatepopup.component';
 import { UserDashboardComponent } from './user-dashboard/user-dashboard.component';
 import { SideNavbarComponent } from './side-navbar/side-navbar.component';
+import { AnalysitComponent } from './analysit/analysit.component';
+import { SidebarComponent } from './layout/component/sidebar/sidebar.component';
+import { SidebarMemuComponent } from './layout/component/sidebar/sidebar-memu/sidebar-memu.component';
+import { SidebarSubmenuComponent } from './layout/component/sidebar/sidebar-submenu/sidebar-submenu.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +29,11 @@ import { SideNavbarComponent } from './side-navbar/side-navbar.component';
     UserComponent,
     UpdatepopupComponent,
     UserDashboardComponent,
-    SideNavbarComponent
+    SideNavbarComponent,
+    AnalysitComponent,
+    SidebarComponent,
+    SidebarMemuComponent,
+    SidebarSubmenuComponent
   ],
   imports: [
     BrowserModule,
