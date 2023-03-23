@@ -39,7 +39,7 @@
   </mat-card-content>
 </mat-card> -->
 
-<div class="hidden sm:block" aria-hidden="true">
+<!-- <div class="hidden sm:block" aria-hidden="true">
   <div class="py-5">
     <div class="border-t border-gray-200"></div>
   </div>
@@ -51,16 +51,6 @@
   </div>
 
   <div class="md:grid md:grid-cols-3 md:gap-6">
-    <!-- <div class="md:col-span-1">
-      <div class="px-4 sm:px-0">
-        <h3 class="text-lg font-medium leading-6 text-gray-900">
-          Personal Information
-        </h3>
-        <p class="mt-1 text-sm text-gray-600">
-          Use a permanent address where you can receive mail.
-        </p>
-      </div>
-    </div> -->
     <div class="mt-5 md:col-span-3 md:mt-0">
       <form
         action="#"
@@ -69,7 +59,7 @@
         (ngSubmit)="proceedregister()"
       >
         <div class="overflow-hidden shadow sm:rounded-md">
-          <div class="bg-white px-4 py-5 sm:p-6">
+          <div class="px-4 py-5 bg-white sm:p-6">
             <div class="grid grid-cols-6 gap-6">
               <div class="col-span-6 sm:col-span-6">
                 <label
@@ -83,7 +73,7 @@
                   name="first-name"
                   id="first-name"
                   autocomplete="given-name"
-                  class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                  class="block w-full mt-1 border-gray-300 rounded-md shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
                 />
               </div>
 
@@ -99,7 +89,7 @@
                   name="street-address"
                   id="street-address"
                   autocomplete="street-address"
-                  class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                  class="block w-full mt-1 border-gray-300 rounded-md shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
                 />
               </div>
 
@@ -115,7 +105,7 @@
                   name="name"
                   id="name"
                   autocomplete="family-name"
-                  class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                  class="block w-full mt-1 border-gray-300 rounded-md shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
                 />
               </div>
 
@@ -131,7 +121,7 @@
                   name="email-address"
                   id="email-address"
                   autocomplete="email"
-                  class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                  class="block w-full mt-1 border-gray-300 rounded-md shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
                 />
               </div>
 
@@ -146,7 +136,7 @@
                   id="country"
                   name="country"
                   autocomplete="country-name"
-                  class="mt-1 block w-full rounded-md border border-gray-300 bg-white py-2 px-3 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
+                  class="block w-full px-3 py-2 mt-1 bg-white border border-gray-300 rounded-md shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
                 >
                   <option value="male">Male</option>
                   <option value="female">Female</option>
@@ -155,17 +145,17 @@
               </div>
             </div>
           </div>
-          <div class="bg-gray-50 px-4 py-3 text-life sm:px-6">
+          <div class="px-4 py-3 bg-gray-50 text-life sm:px-6">
             <button
               type="submit"
-              class="inline-flex justify-center rounded-md border border-transparent bg-indigo-600 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+              class="inline-flex justify-center px-4 py-2 text-sm font-medium text-white bg-indigo-600 border border-transparent rounded-md shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
             >
               Save
             </button>
             <a href="" routerLink="/login">
               <button
                 type=""
-                class="inline-flex justify-center rounded-md border border-transparent bg-pink-500 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-pink-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 ml-2"
+                class="inline-flex justify-center px-4 py-2 ml-2 text-sm font-medium text-white bg-pink-500 border border-transparent rounded-md shadow-sm hover:bg-pink-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
               >
                 Back to Login
               </button>
@@ -181,4 +171,119 @@
   <div class="py-5">
     <div class="border-t border-gray-200"></div>
   </div>
+</div> -->
+
+
+
+<div>
+  <body
+    class="min-h-screen px-2 pt-12 pb-6 body-bg md:pt-20 md:px-0"
+    style="font-family: 'Lato', sans-serif"
+  >
+    <header class="max-w-lg mx-auto">
+      <a href="#">
+        <h1 class="text-4xl font-bold text-center text-white">Startup</h1>
+      </a>
+    </header>
+
+    <main
+      class="max-w-lg p-8 mx-auto my-10 bg-white rounded-lg shadow-2xl md:p-12"
+    >
+      <section>
+        <h3 class="text-2xl font-bold">Welcome to Sing Up</h3>
+        <p class="pt-2 text-gray-600">Sign Up to your account.</p>
+      </section>
+
+      <section class="mt-10">
+        <form
+          class="flex flex-col"
+          method="POST"
+          action="#"
+          [formGroup]="registerform"
+        (ngSubmit)="proceedregister()"
+        >
+          <div class="pt-3 mb-6 bg-gray-200 rounded">
+            <label
+              class="block mb-2 ml-3 text-sm font-bold text-gray-700"
+              for="email"
+              >User Name</label
+            >
+            <input
+              formControlName="username"
+              type="text"
+              id="username"
+              class="w-full px-3 pb-3 text-gray-700 transition duration-500 bg-gray-200 border-b-4 border-gray-300 rounded focus:outline-none focus:border-purple-600"
+            />
+          </div>
+          <div class="pt-3 mb-6 bg-gray-200 rounded">
+            <label
+              class="block mb-2 ml-3 text-sm font-bold text-gray-700"
+              for="password"
+              >Password</label
+            >
+            <input
+              formControlName="password"
+              type="password"
+              id="password"
+              class="w-full px-3 pb-3 text-gray-700 transition duration-500 bg-gray-200 border-b-4 border-gray-300 rounded focus:outline-none focus:border-purple-600"
+            />
+          </div>
+          <div class="col-span-3 pt-3 mb-6 bg-gray-200 rounded">
+            <label
+              class="block mb-2 ml-3 text-sm font-bold text-gray-700"
+              for="name"
+              >Name</label
+            >
+            <input
+              formControlName="name"
+              type="text"
+              id="name"
+              class="w-full px-3 pb-3 text-gray-700 transition duration-500 bg-gray-200 border-b-4 border-gray-300 rounded focus:outline-none focus:border-purple-600"
+            />
+          </div>
+          <div class="col-span-3 pt-3 mb-6 bg-gray-200 rounded">
+            <label
+              class="block mb-2 ml-3 text-sm font-bold text-gray-700"
+              for="email"
+              >email</label
+            >
+            <input
+              formControlName="email"
+              type="email"
+              id="email"
+              class="w-full px-3 pb-3 text-gray-700 transition duration-500 bg-gray-200 border-b-4 border-gray-300 rounded focus:outline-none focus:border-purple-600"
+            />
+          </div>
+          <button
+            class="py-2 font-bold text-white transition duration-200 bg-blue-400 rounded shadow-lg hover:bg-blue-500 hover:shadow-xl"
+            type="submit"
+          >
+            Register
+          </button>
+          <br />
+          <button
+            [routerLink]="['/login']"
+            class="py-2 font-bold text-white transition duration-200 bg-yellow-400 rounded shadow-lg hover:bg-yellow-500 hover:shadow-xl"
+            type="submit"
+          >
+            Back  to Login
+          </button>
+        </form>
+      </section>
+    </main>
+
+    <div class="max-w-lg mx-auto mt-12 mb-6 text-center">
+      <p class="text-white">
+        Don't have an account?
+        <a href="#" class="font-bold hover:underline">Sign up</a>.
+      </p>
+    </div>
+
+    <footer class="flex justify-center max-w-lg mx-auto text-white">
+      <a href="#" class="hover:underline">Contact</a>
+      <span class="mx-3">asdasd</span>
+      <a href="#" class="hover:underline">Privacy</a>
+    </footer>
+  </body>
+  
 </div>

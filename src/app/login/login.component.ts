@@ -30,11 +30,12 @@ export class LoginComponent {
           if (this.result.IsActive) {
             sessionStorage.setItem('username',this.result.username);
             sessionStorage.setItem('role',this.result.role);
-            this.router.navigate(['user/profile']);
+            this.router.navigate(['/']);
           } else {
             this.toastr.error('Please contact Admin', 'InActive User');
           }
         } else {
+          this.router.navigate(['/wit']);
           this.toastr.error('Invalid credentials');
         }
       });
@@ -42,4 +43,6 @@ export class LoginComponent {
       this.toastr.warning('Please enter valid data.')
     }
   }
+
+
 }

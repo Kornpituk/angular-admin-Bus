@@ -17,12 +17,13 @@ export class AuthGuard implements CanActivate {
       if (route.url.length > 0) {
         let menu = route.url[0].path;
         if (menu == 'user') {
+          // return true;
           if (this.service.getrole() == 'admin') {
             return true;
           } else {
-            // this.router.navigate(['']);
-              // this.tostr.warning('You dont have access.')
-            return true;
+            this.router.navigate(['']);
+            this.tostr.warning('You dont have access.')
+            return false;
           }
         }else{
           return true;

@@ -4,22 +4,23 @@ import { ToastrService } from 'ngx-toastr';
 import { AuthService } from '../service/auth.service';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 
+
 @Component({
   selector: 'app-updatepopup',
   templateUrl: './updatepopup.component.html',
   styleUrls: ['./updatepopup.component.css']
 })
+
+
 export class UpdatepopupComponent implements OnInit {
 
   constructor(private builder: FormBuilder, private service: AuthService, private toastr: ToastrService,
-    private dialogref: MatDialogRef<UpdatepopupComponent>, @Inject(MAT_DIALOG_DATA) public data: any) {
-
+    private dialogref: MatDialogRef<UpdatepopupComponent>,
+    @Inject(MAT_DIALOG_DATA) public data: any) {
     this.service.getuserrole().subscribe(res => {
       this.rolelist = res;
+      console.log("this.rolelist"+this.rolelist+res);
     });
-    
-    
-
   }
   ngOnInit(): void {
     if (this.data.usercode != '' && this.data.usercode != null) {
@@ -28,10 +29,13 @@ export class UpdatepopupComponent implements OnInit {
   }
   rolelist: any;
   editdata: any;
+  // rolelist: Role[]=[];
+  // editdata: User[]=[];
 
   registerform = this.builder.group({
-    id: this.builder.control(''),
+    user_id: this.builder.control(''),
     name: this.builder.control(''),
+    user_name: this.builder.control(''),
     password: this.builder.control(''),
     email: this.builder.control(''),
     gender: this.builder.control('male'),
@@ -40,18 +44,21 @@ export class UpdatepopupComponent implements OnInit {
   });
 
   loaduserdata(code: any) {
-    this.service.GetUserbyCode(code).subscribe(res => {
+    this.service.GetUserbyUserName(code).subscribe(res => {
       this.editdata = res;
-      console.log(this.editdata);
+      // console.log("this.editdata"+this.editdata+"res"+res);
+
       this.registerform.setValue({
-        id: this.editdata.id, name: this.editdata.name,
+        user_id: this.editdata.user_id, name: this.editdata.name,
+        user_name: this.editdata.user_name,
         password: this.editdata.password, email: this.editdata.email, gender: this.editdata.gender,
-        role: this.editdata.role, isactive: this.editdata.isactive
+        role: this.editdata.role, isactive: this.editdata.is_active
       });
     });
+    console.log("username"+this.registerform.value)
   }
   UpdateUser() {
-    this.service.updateuser(this.registerform.value.id, this.registerform.value).subscribe(res => {
+    this.service.updateuser(this.registerform.value.user_id, this.registerform.value).subscribe(res => {
       this.toastr.success('Updated successfully.');
       this.dialogref.close();
     });

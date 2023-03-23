@@ -1,68 +1,72 @@
 <div class="min-h-full">
   <nav class="bg-gray-800">
-    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-      <div class="flex h-16 items-center justify-between">
+    <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
         <div class="flex items-center">
           <div class="flex-shrink-0">
             <img
-              class="h-8 w-8"
+              class="w-8 h-8"
               src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
               alt="Your Company"
             />
           </div>
           <div class="hidden md:block">
-            <div class="ml-10 flex items-baseline space-x-4">
+            <div class="flex items-baseline ml-10 space-x-4">
               <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
               <a
                 routerLink=""
                 href="#"
-                class="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium"
+                class="px-3 py-2 text-sm font-medium text-white bg-gray-900 rounded-md"
                 aria-current="page"
                 >Dashboard</a
               >
 
               <a
+                routerLink="/user/profile"
                 href="#"
-                class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                class="px-3 py-2 text-sm font-medium text-gray-300 rounded-md hover:bg-gray-700 hover:text-white"
+                >User</a
+              >
+
+              <a
+                *ngIf="isadmin"
+                routerLink="/user"
+                href="#"
+                class="px-3 py-2 text-sm font-medium text-gray-300 rounded-md hover:bg-gray-700 hover:text-white"
                 >Team</a
               >
 
               <a
+                routerLink="/form"
                 href="#"
-                class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-                >Projects</a
+                class="px-3 py-2 text-sm font-medium text-gray-300 rounded-md hover:bg-gray-700 hover:text-white"
+                >Form</a
               >
 
               <a
                 href="#"
-                class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-                >Calendar</a
-              >
-
-              <a
-                href="#"
-                class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                class="px-3 py-2 text-sm font-medium text-gray-300 rounded-md hover:bg-gray-700 hover:text-white"
                 >Reports</a
               >
               <a
-              routerLink="/login"
+                routerLink="/login"
                 href="#"
-                class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                class="px-3 py-2 text-sm font-medium text-gray-300 rounded-md hover:bg-gray-700 hover:text-white"
                 >Logout</a
               >
             </div>
           </div>
         </div>
         <div class="hidden md:block">
-          <div class="ml-4 flex items-center md:ml-6">
+          <div class="flex items-center ml-4 md:ml-6">
             <button
               type="button"
-              class="rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
+              class="p-1 text-gray-400 bg-gray-800 rounded-full hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
             >
               <span class="sr-only">View notifications</span>
               <!-- Heroicon name: outline/bell -->
               <svg
-                class="h-6 w-6"
+                class="w-6 h-6"
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
@@ -83,14 +87,14 @@
               <div>
                 <button
                   type="button"
-                  class="flex max-w-xs items-center rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
+                  class="flex items-center max-w-xs text-sm bg-gray-800 rounded-full focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
                   id="user-menu-button"
                   aria-expanded="false"
                   aria-haspopup="true"
                 >
                   <span class="sr-only">Open user menu</span>
                   <img
-                    class="h-8 w-8 rounded-full"
+                    class="w-8 h-8 rounded-full"
                     src="https://i.pinimg.com/originals/0c/67/5a/0c675a8e1061478d2b7b21b330093444.gif"
                     alt=""
                   />
@@ -108,7 +112,7 @@
                   To: "transform opacity-0 scale-95"
               -->
               <!-- <div
-                class="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
+                class="absolute right-0 z-10 w-48 py-1 mt-2 origin-top-right bg-white rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
                 role="menu"
                 aria-orientation="vertical"
                 aria-labelledby="user-menu-button"
@@ -145,11 +149,11 @@
             </div>
           </div>
         </div>
-        <div class="-mr-2 flex md:hidden">
+        <div class="flex -mr-2 md:hidden">
           <!-- Mobile menu button -->
           <button
             type="button"
-            class="inline-flex items-center justify-center rounded-md bg-gray-800 p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
+            class="inline-flex items-center justify-center p-2 text-gray-400 bg-gray-800 rounded-md hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
             aria-controls="mobile-menu"
             aria-expanded="false"
           >
@@ -160,7 +164,7 @@
               Menu open: "hidden", Menu closed: "block"
             -->
             <svg
-              class="block h-6 w-6"
+              class="block w-6 h-6"
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
@@ -180,7 +184,7 @@
               Menu open: "block", Menu closed: "hidden"
             -->
             <svg
-              class="hidden h-6 w-6"
+              class="hidden w-6 h-6"
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
@@ -201,45 +205,45 @@
 
     <!-- Mobile menu, show/hide based on menu state. -->
     <div class="md:hidden" id="mobile-menu">
-      <div class="space-y-1 px-2 pt-2 pb-3 sm:px-3">
+      <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
         <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
         <a
           href="#"
           routerLink=""
-          class="bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium"
+          class="block px-3 py-2 text-base font-medium text-white bg-gray-900 rounded-md"
           aria-current="page"
           >Dashboard</a
         >
 
         <a
           href="#"
-          class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+          class="block px-3 py-2 text-base font-medium text-gray-300 rounded-md hover:bg-gray-700 hover:text-white"
           >Team</a
         >
 
         <a
           href="#"
-          class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+          class="block px-3 py-2 text-base font-medium text-gray-300 rounded-md hover:bg-gray-700 hover:text-white"
           >Projects</a
         >
 
         <a
           href="#"
-          class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+          class="block px-3 py-2 text-base font-medium text-gray-300 rounded-md hover:bg-gray-700 hover:text-white"
           >Calendar</a
         >
 
         <a
           href="#"
-          class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+          class="block px-3 py-2 text-base font-medium text-gray-300 rounded-md hover:bg-gray-700 hover:text-white"
           >Reports</a
         >
       </div>
-      <div class="border-t border-gray-700 pt-4 pb-3">
+      <div class="pt-4 pb-3 border-t border-gray-700">
         <div class="flex items-center px-5">
           <div class="flex-shrink-0">
             <img
-              class="h-10 w-10 rounded-full"
+              class="w-10 h-10 rounded-full"
               src="https://i.pinimg.com/originals/0c/67/5a/0c675a8e1061478d2b7b21b330093444.gif"
               alt=""
             />
@@ -254,12 +258,12 @@
           </div>
           <button
             type="button"
-            class="ml-auto flex-shrink-0 rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
+            class="flex-shrink-0 p-1 ml-auto text-gray-400 bg-gray-800 rounded-full hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
           >
             <span class="sr-only">View notifications</span>
             <!-- Heroicon name: outline/bell -->
             <svg
-              class="h-6 w-6"
+              class="w-6 h-6"
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
@@ -275,23 +279,23 @@
             </svg>
           </button>
         </div>
-        <div class="mt-3 space-y-1 px-2">
+        <div class="px-2 mt-3 space-y-1">
           <a
             href="#"
-            class="block rounded-md px-3 py-2 text-base font-medium text-gray-400 hover:bg-gray-700 hover:text-white"
+            class="block px-3 py-2 text-base font-medium text-gray-400 rounded-md hover:bg-gray-700 hover:text-white"
             >Your Profile</a
           >
 
           <a
             href="#"
-            class="block rounded-md px-3 py-2 text-base font-medium text-gray-400 hover:bg-gray-700 hover:text-white"
+            class="block px-3 py-2 text-base font-medium text-gray-400 rounded-md hover:bg-gray-700 hover:text-white"
             >Settings</a
           >
 
           <a
-          routerLink="/login"
+            routerLink="/login"
             href="#"
-            class="block rounded-md px-3 py-2 text-base font-medium text-gray-400 hover:bg-gray-700 hover:text-white"
+            class="block px-3 py-2 text-base font-medium text-gray-400 rounded-md hover:bg-gray-700 hover:text-white"
             >Sign out</a
           >
         </div>
@@ -300,20 +304,23 @@
   </nav>
 
   <header class="bg-white shadow">
-    <div class="mx-auto max-w-7xl py-6 px-4 sm:px-6 lg:px-8">
+    <div class="px-4 py-6 mx-auto max-w-7xl sm:px-6 lg:px-8">
       <h1 class="text-3xl font-bold tracking-tight text-gray-900">Dashboard</h1>
     </div>
   </header>
   <main>
-    <div class="mx-auto max-w-7xl py-6 sm:px-6 lg:px-8">
+    <div class="py-6 mx-auto max-w-7xl sm:px-6 lg:px-8">
       <!-- Replace with your content -->
       <h1>Replace with your content</h1>
-      <div class="px-4 py-6 sm:px-0 ">
-        <div class="h-120 rounded-lg border-4 border-dashed border-gray-200">
+      <div class="px-4 py-6 sm:px-0">
+        <div class="border-4 border-gray-200 border-dashed rounded-lg h-120">
           <router-outlet></router-outlet>
         </div>
       </div>
       <!-- /End replace -->
     </div>
   </main>
+  <footer class="bg-white border-t border-gray-400 shadow">
+    <app-footer></app-footer>
+  </footer>
 </div>
